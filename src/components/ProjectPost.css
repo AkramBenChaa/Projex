@@ -1,0 +1,122 @@
+.projectpost {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    width: 100%;
+    height: 280px;
+    padding: 20px;
+    border-radius: 16px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.projectpost:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+.projectpost-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.projectpost-title img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.projectpost-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    background: #eef2ff;
+    border-radius: 8px;
+}
+
+.projectpost-title p {
+    font-weight: 700;
+    margin: 0;
+    font-size: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.projectpost-desc {
+    flex: 1;
+    margin: 14px 0;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.link {
+    display: flex;
+    gap: 10px;
+}
+
+.projectpost a,
+.link-disabled {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.projectpost a {
+    background-color: var(--accent);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.projectpost a:hover {
+    background-color: var(--accent-hover);
+    transform: scale(1.03);
+}
+
+.link-disabled {
+    background-color: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .projectpost {
+        height: 260px;
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .projectpost-title img,
+    .projectpost-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .projectpost-title p {
+        font-size: 17px;
+    }
+
+    .projectpost-desc {
+        font-size: 14px;
+        -webkit-line-clamp: 3;
+    }
+}

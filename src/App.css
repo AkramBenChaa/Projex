@@ -1,0 +1,77 @@
+/* Main styles */
+html,
+body,
+#root {
+    min-height: 100%;
+    margin: 0;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.app-header h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #818cf8, #6366f1, #a78bfa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.app-header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.projects-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    align-items: stretch;
+}
+
+.status-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        padding: 30px 15px 10px;
+    }
+
+    .app-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .app-header p {
+        font-size: 0.95rem;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px 15px;
+    }
+}
